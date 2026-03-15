@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99acres Real Estate Scraper Suite - Portfolio Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: white;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+            padding: 60px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 300;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-box {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-box h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: var(--light);
+            color: var(--secondary);
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--secondary);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { padding: 0; }
+            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>99acres Scraper Suite</h1>
+        <p class="subtitle">A Professional Real Estate Data Extraction Solution</p>
+    </header>
+
+    <section>
+        <h2>Project Overview</h2>
+        <p>A comprehensive three-tier scraping architecture designed to extract critical property listing data from 99acres.com. This project solves the most common challenges in real estate scraping, including anti-bot detection, dynamic class randomization, and Cloudflare protection.</p>
+    </section>
+
+    <section>
+        <h2>Three-Tier Architecture</h2>
+        <div class="grid">
+            <div class="feature-box">
+                <h3>Version 1: Semantic Engine</h3>
+                <p>Bypasses daily class randomization by using semantic text detection. Finds property cards by identifying price symbols and BHK patterns directly on the render.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Version 2: Deep Crawler</h3>
+                <p>Ensures 100% data integrity by depth-crawling individual property pages. Extracts full technical specs and direct broker information.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Version 3: Parallel HTTP</h3>
+                <p>Enterprise-scale performance. Utilizes asynchronous HTTP requests and ScraperAPI residential proxies to fetch hundreds of properties in seconds.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Security & Stealth</h3>
+                <p>Integrated playwright-stealth, header rotation, and automated TLS fingerprinting to ensure long-term reliability and ban prevention.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Stack</h2>
+        <div class="tech-stack">
+            <span class="tag">Python 3.10+</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Asyncio</span>
+            <span class="tag">ScraperAPI</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">BeautifulSoup4</span>
+            <span class="tag">Parallelism</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Data Extraction Preview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Price</th>
+                    <th>Location</th>
+                    <th>Size (sqft)</th>
+                    <th>Contact Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Delhi</td>
+                    <td>₹7.25 Cr</td>
+                    <td>Sector 72, Noida</td>
+                    <td>2,690 sqft</td>
+                    <td>DLF Group (Builder)</td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td>₹1.42 Cr</td>
+                    <td>Site C, Greater Noida</td>
+                    <td>1,200 sqft</td>
+                    <td>Aryan Sharma (Agent)</td>
+                </tr>
+                <tr>
+                    <td>Mumbai</td>
+                    <td>₹23 - 35 L</td>
+                    <td>Uttam Nagar West</td>
+                    <td>850 sqft</td>
+                    <td>Owner Listed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Key Capabilities</h2>
+        <ul>
+            <li><strong>Anti-Bot Bypass:</strong> Successfully defeats Cloudflare and PerimeterX protections.</li>
+            <li><strong>Scale:</strong> Capable of scraping 10,000+ listings daily using the Parallel API route.</li>
+            <li><strong>Auto-Formatting:</strong> Intelligent parsing of Indian currency (Lakhs/Crores) into standard numeric data.</li>
+            <li><strong>Documentation:</strong> Full codebase transparency with per-module instruction sets.</li>
+        </ul>
+    </section>
+
+    <div class="footer">
+        <p>Developed by Antigravity - Expert Agentic Coding Solutions</p>
+        <p>Neural-Arun Engineering Portfolio | 2026</p>
+    </div>
+</div>
+
+</body>
+</html>

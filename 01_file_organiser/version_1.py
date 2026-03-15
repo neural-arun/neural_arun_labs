@@ -85,7 +85,6 @@ def organize_folder(
 
     return summary
 
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Organize a folder into PDFs, Videos, Images, and Others."
